@@ -1,0 +1,111 @@
+/*!
+Theme Name: Edusite CO
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Tema educativo moderno con Tailwind CSS para instituciones educativas
+Version: 1.0.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: edusiteco
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+edusiteco is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+This file only contains the theme header information for WordPress.
+All styles are compiled from Tailwind CSS and located in assets/css/base.css
+*/
+/* Footer contact email styling */
+.footer-contact-email {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    display: inline-block;
+    min-width: 0;
+}
+
+.header-branding {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.header-brand-logo,
+.header-brand-logo img {
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    flex: 0 0 3.5rem;
+}
+
+.header-brand-logo img {
+    object-fit: contain;
+}
+
+.header-brand-copy {
+    min-width: 0;
+}
+
+.header-brand-copy .site-title {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.header-brand-copy .site-description {
+    margin: 0.2rem 0 0;
+    font-size: 0.8rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+.no-header-image .header-navigation .header-group > a,
+.has-header-image .header-navigation .header-group > a {
+    padding-right: 0.375rem;
+    padding-left: 0.375rem;
+}
+
+@media (max-width: 640px) {
+    .header-brand-logo,
+    .header-brand-logo img {
+        width: 3rem;
+        height: 3rem;
+        flex-basis: 3rem;
+    }
+
+    .header-brand-copy .site-title {
+        font-size: 1.1rem;
+    }
+
+    .header-brand-copy .site-description {
+        font-size: 0.7rem;
+    }
+}
+
+.welcome-hero__image {
+    animation: welcome-hero-drift 18s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+.welcome-hero__shade {
+    background: linear-gradient(90deg, rgba(5, 25, 42, 0.56) 0%, rgba(5, 25, 42, 0.3) 55%, rgba(5, 25, 42, 0.08) 100%);
+}
+
+@keyframes welcome-hero-drift {
+    from { transform: scale(1.02) translateX(-0.5%); }
+    to { transform: scale(1.1) translateX(0.5%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .welcome-hero__image {
+        animation: none;
+    }
+}
